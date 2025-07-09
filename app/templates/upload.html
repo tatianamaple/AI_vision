@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Upload Cafe Photo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4e9f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 50px 40px;
+            border: 2px solid #d3d3d3;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .header img {
+            width: 50px;
+            height: auto;
+            margin-left: 15px;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: #999;
+        }
+
+        button {
+            background-color: #cf0879;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #990280;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Upload a Photo of the Cafe</h1>
+        <img src="https://images.vexels.com/media/users/3/145589/isolated/preview/e224f5817268d0af82ca77d7bcc64a37-coffee-cup.png?w=360" />
+    </div>
+    <h2>Keep track of how many guests are at your cafe. Upload a photo to count number of guests</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Analyze</button>
+    </form>
+</div>
+</body>
+</html>

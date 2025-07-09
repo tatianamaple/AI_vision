@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detection Result</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4e9f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 50px 40px;
+      border: 2px solid #d3d3d3;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    h1 span {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    a {
+      padding: 12px 24px;
+      background-color: #cf0879;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    a:hover {
+      background-color: #990280;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Number of People Detected: <span>{{ count }}</span></h1>
+  </div>
+  <img src="{{ image_url }}" alt="Detection Result" />
+  <div class="buttons">
+    <a href="/">Upload another image</a>
+    <a href="/generate_report">Download report.pdf</a>
+  </div>
+</div>
+</body>
+</html>
