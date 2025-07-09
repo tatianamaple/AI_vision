@@ -79,13 +79,6 @@ def upload_image():
 
     return render_template('upload.html')
 
-def reset_history():
-    conn = sqlite3.connect('history.db')
-    cursor = conn.cursor()
-    cursor.execute('DELETE FROM history')
-    conn.commit()
-    conn.close()
-
 @app.route('/generate_report')
 def report():
     reports_dir = os.path.join(os.path.dirname(__file__), 'reports')
