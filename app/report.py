@@ -21,9 +21,6 @@ def generate_report(pdf_path='report.pdf'):
     c = canvas.Canvas(pdf_path, pagesize=letter)
     width, height = letter
     y_position = height - 50
-
-    c.setFont("Helvetica-Bold", 16)
-    c.drawString(50, y_position, "Analysis History Report")
     y_position -= 30
 
     c.setFont("Helvetica", 12)
